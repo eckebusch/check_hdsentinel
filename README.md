@@ -21,7 +21,7 @@ Please see [Local checks](https://docs.checkmk.com/latest/en/localchecks.html) t
 > **_NOTE:_**  You should already have a working CheckMK instance with agents up and running :D
 
 ## Adding services to the monitoring
-After placing the script inside of the above mentioned folder, it will automatically executed and by the agent and provides one service per disk to the monitoring system.
+After placing the script inside of the above mentioned folder, it will automatically executed by the agent and provides one service per disk to the monitoring system.
 
 ## Notes
 - it's not final
