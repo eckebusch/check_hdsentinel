@@ -32,10 +32,11 @@ do {
       [int]$comm_errors = 0
       [int]$weakSectors = 0
             
+      # get connection errors out of the description
       if( $description -like "*roblem*") {
         [int]$comm_errors = $description -replace '[^0-9]',''
         } else {
-          #get weak sectors
+          #get weak sectors out of the description
           [int]$weakSectors = $description -replace '[^0-9]',''
           [int]$comm_errors = 0
           
@@ -46,6 +47,7 @@ do {
           #     else {
           #     $health=111}
 
+          #replace missing temps
           if( $xmlTemp -ne '?'){
           $pos = $xmlTemp.IndexOf(" ")
           $temp = $xmlTemp.Substring(0, $pos)
