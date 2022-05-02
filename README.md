@@ -26,6 +26,6 @@ Start a new service discovery and add the new found services to the monitoring. 
 
 ## Notes
 - it's not final
-- WARN/CRIT states are calculated on the host depending on the tresholds in the script
+- WARN/CRIT states are calculated on the host dynamically depending on the tresholds provided by the script
 - tresholds can be adjusted if needed
 - compatible with checkmk 2.0+ (you can switch to v1.6+ mode by uncommenting the output line and uncommenting the secod output line below - but the resulting service name will consist of the disk number only because whitespaces are not allowed in v1.6)
