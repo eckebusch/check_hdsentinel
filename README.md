@@ -1,5 +1,6 @@
 # General
-Powershell script for [CheckMK](https://checkmk.com/) to use [Hard Disk Sentinel](https://www.hdsentinel.com/) Hard Disk/Solid State Disk information for monitoring.  This script is for Windows Operating Systems only - sorry ;)
+Powershell script for [CheckMK](https://checkmk.com/) to use [Hard Disk Sentinel](https://www.hdsentinel.com/) Hard Disk/Solid State Disk information for monitoring.  
+This script is for Windows Operating Systems only - sorry ;)
 
 This powershell script parses the HDSentinel.xml file, which is created by the registered PRO version of **Hard Disk Sentinel**.  
 It iterates through the XML file and searches for all disks with usable information. Then it produces CheckMK compatible output - one line per disk.  
