@@ -2,8 +2,8 @@
 Powershell script for [CheckMK](https://checkmk.com/) to use [Hard Disk Sentinel](https://www.hdsentinel.com/) Hard Disk/Solid State Disk information for monitoring.
 This script is for Windows Operating Systems only - sorry ;)
 
-This powershell script parses the HDSentinel.xml file, which is created by the registered PRO version of **Hard Disk Sentinel**.
-It iterates through the XML file and searches for all disks with usable information. Then it produces CheckMK compatible output - one line per disk.
+This powershell script parses the HDSentinel.xml file, which is created by the registered PRO version of **Hard Disk Sentinel**.  
+It iterates through the XML file and searches for all disks with usable information. Then it produces CheckMK compatible output - one line per disk.  
 It searches for the XML in the default (installation) folder of HDSentinel: `C:\Program Files (x86)\Hard Disk Sentinel\HDSentinel.xml`
 
 # [CheckMK](https://checkmk.com/)
@@ -21,8 +21,9 @@ Please see [Local checks](https://docs.checkmk.com/latest/en/localchecks.html) t
 > **_NOTE:_**  You should ideally already have a working CheckMK instance with agents up and running :D
 
 ## Adding services to the monitoring
-After placing the script inside of the above mentioned folder, it will automatically executed by the agent and provides one service per disk to the monitoring system.  
-Start a new service discovery and add the new found services to the monitoring. Apply the changes and you are good to go!
+After placing the script inside of the above mentioned folder, it will automatically executed by the agent every time the agent collects data.  
+Start a new service discovery of the host and add the new found services to the monitoring. Apply the changes and you are good to go!  
+You will get one service per disk with multiple informations like current temperature, bad sector count, communication errors (between disk and controller) and so on.
 
 ## Notes
 - it's not final
