@@ -15,10 +15,9 @@ Hard Disk Sentinel (HDSentinel) is a multi-OS SSD and HDD monitoring and analysi
 No need to use separate tools to verify internal hard disks, external hard disks, SSDs, hybrid disk drives (SSHD), disks in RAID arrays and Network Attached Storage (NAS) drives as these are all included in a single software. In addition Hard Disk Sentinel Pro detects and displays status and S.M.A.R.T. information about LTO tape drives and appropriate industrial (micro) SD cards and eMMC devices too. See the How to: monitor Network Attached Storage (NAS) status for information about hard disk monitoring in Network Attached Storage (NAS) devices.
 
 ## Deploying the script
-> **_NOTE:_**  You should already have a working CheckMK instance with agents up and running :D
-
 Just put the script in the agents "local" directory of the monitored host:
 `%ProgramData%\checkmk\agent\local`
+> **_NOTE:_**  You should already have a working CheckMK instance with agents up and running :D
 
 Please see [Local checks](https://docs.checkmk.com/latest/en/localchecks.html) to learn about more advanced methods of distributing (via the Agent Bakery).
 
