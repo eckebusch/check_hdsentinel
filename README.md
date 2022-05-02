@@ -23,10 +23,10 @@ Please see [Local checks](https://docs.checkmk.com/latest/en/localchecks.html) t
 ## Adding services to the monitoring
 After placing the script inside of the above mentioned folder, it will automatically executed by the agent every time the agent collects data.  
 Start a new service discovery of the host and add the new found services to the monitoring. Apply the changes and you are good to go!  
-You will get one service per disk with multiple informations like current temperature, bad sector count, communication errors (between disk and controller) and so on.
+You will get one service per disk with multiple informations like **current temperature**, **bad sector count**, **communication errors** (between disk and controller), **disk model** and so on.
 
 ## Notes
-- it's not final
+- it's not final!
 - WARN/CRIT states are calculated on the host dynamically depending on the tresholds provided by the script
 - tresholds can be adjusted if needed
 - compatible with checkmk 2.0+ (you can switch to v1.6+ mode by uncommenting the output line and uncommenting the secod output line below - but the resulting service name will consist of the disk number only because whitespaces are not allowed in v1.6)
