@@ -4,7 +4,7 @@ This script is for Windows Operating Systems only - sorry ;)
 
 This powershell script parses the HDSentinel.xml file, which is created by the registered PRO version of **Hard Disk Sentinel**.
 It iterates through the XML file and searches for all disks with usable information. Then it produces CheckMK compatible output - one line per disk.
-It searches for the XML File in the default (installation) folder of HDSentinel.
+It searches for the XML in the default (installation) folder of HDSentinel.
 
 # [CheckMK](https://checkmk.com/)
 Checkmk provides powerful monitoring of networks, servers, clouds, containers and applications. Fast. Effective.
