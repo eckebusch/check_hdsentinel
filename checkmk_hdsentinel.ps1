@@ -2,10 +2,7 @@
 [xml]$xmlAttr = Get-Content -Path 'C:\Program Files (x86)\Hard Disk Sentinel\HDSentinel.xml'
 
 #desired Output Sample:
-#P "Disk1" health=100;99;90 temp=35;40;45 + Infos
-#
-# 2do
-# - unterschieden zwischen HDD und SSD bzgl. Temraturlimits
+#P "001 WD Red 4TB" health=100;99;90 temp=35;40;45 + Infos
 
 
 [int]$disk=0
@@ -67,7 +64,4 @@ do {
         }
     $disk++
     $diskNr=("Physical_Disk_Information_Disk_" + $disk)
-    #Write-Host $xmlHD_Nr
-    #Write-Host $xmlAttr.Hard_Disk_Sentinel.$diskNr.Hard_Disk_Summary.Hard_Disk_Number
-    
    } until ($xmlAttr.Hard_Disk_Sentinel.$diskNr.Hard_Disk_Summary.Hard_Disk_Number -eq $null)
