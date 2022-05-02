@@ -17,6 +17,7 @@ No need to use separate tools to verify internal hard disks, external hard disks
 ## Deploying the script
 Just put the script in the agents "local" directory:
 `%ProgramData%\checkmk\agent\local`
+
 Please see [Local checks](https://docs.checkmk.com/latest/en/localchecks.html) to learn about more advanced methods of distributing (via the Agent Bakery).
 
 ## Adding services to the monitoring
