@@ -18,7 +18,7 @@ No need to use separate tools to verify internal hard disks, external hard disks
 Just put the script in the agents "local" directory of the monitored host:
 `%ProgramData%\checkmk\agent\local`  
 Please see [Local checks](https://docs.checkmk.com/latest/en/localchecks.html) to learn about more advanced methods of distributing (via the Agent Bakery).
-> **_NOTE:_**  You should already have a working CheckMK instance with agents up and running :D
+> **_NOTE:_**  You should ideally already have a working CheckMK instance with agents up and running :D
 
 ## Adding services to the monitoring
 After placing the script inside of the above mentioned folder, it will automatically executed by the agent and provides one service per disk to the monitoring system.
