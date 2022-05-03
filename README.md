@@ -1,14 +1,14 @@
 # General
-PowerShell script for [CheckMK](https://checkmk.com/) to use [Hard Disk Sentinels](https://www.hdsentinel.com/) Hard Disk/Solid State Disk information for monitoring.  
+PowerShell script for [Checkmk](https://checkmk.com/) to use [Hard Disk Sentinels](https://www.hdsentinel.com/) Hard Disk/Solid State Disk information for monitoring.  
 *This script is for Windows Operating Systems only - sorry ;)*
 
 This script parses the HDSentinel.xml file, which is created and updated periodically by the <ins>registered</ins> PRO version of **Hard Disk Sentinel**.  
 It searches for the XML in the default (installation) folder of HDSentinel: `C:\Program Files (x86)\Hard Disk Sentinel\HDSentinel.xml`  
-It iterates through the XML file, searches for all disks with usable information and produces CheckMK compatible output - one line per disk.  
+It iterates through the XML file, searches for all disks with usable information and produces Checkmk compatible output - one line per disk.  
 ![sample script_output](images/script_output.PNG "sample script output")
 
 
-# [CheckMK](https://checkmk.com/)
+# [Checkmk](https://checkmk.com/)
 Checkmk provides powerful monitoring of networks, servers, clouds, containers and applications. Fast. Effective.
 
 # [Hard Disk Sentinel](https://www.hdsentinel.com/)
@@ -20,7 +20,7 @@ No need to use separate tools to verify internal hard disks, external hard disks
 Just put the script in the agents "local" directory of the monitored host:
 `%ProgramData%\checkmk\agent\local`  
 Please see [Local checks](https://docs.checkmk.com/latest/en/localchecks.html) to learn about more advanced methods of distributing (via the Agent Bakery).
-> **_NOTE:_**  You should ideally already have a working CheckMK instance with agents up and running :D
+> **_NOTE:_**  You should ideally already have a working Checkmk instance with agents up and running :D
 
 ## Adding services to the monitoring
 After placing the script inside of the above mentioned folder, it will automatically executed by the agent every time the agent collects data.  
