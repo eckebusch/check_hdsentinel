@@ -2,9 +2,11 @@
 PowerShell script for [CheckMK](https://checkmk.com/) to use [Hard Disk Sentinel](https://www.hdsentinel.com/) Hard Disk/Solid State Disk information for monitoring.  
 *This script is for Windows Operating Systems only - sorry ;)*
 
-This script parses the HDSentinel.xml file, which is created and periodically updated by the <ins>registered</ins> PRO version of **Hard Disk Sentinel**.  
-It iterates through the XML file and searches for all disks with usable information. Then it produces CheckMK compatible output - one line per disk.  
-It searches for the XML in the default (installation) folder of HDSentinel: `C:\Program Files (x86)\Hard Disk Sentinel\HDSentinel.xml`
+This script parses the HDSentinel.xml file, which is created and updated periodically by the <ins>registered</ins> PRO version of **Hard Disk Sentinel**.  
+It searches for the XML in the default (installation) folder of HDSentinel: `C:\Program Files (x86)\Hard Disk Sentinel\HDSentinel.xml`  
+It iterates through the XML file, searches for all disks with usable information and produces CheckMK compatible output - one line per disk.  
+![sample script_output](images/script_output.PNG "sample script output")
+
 
 # [CheckMK](https://checkmk.com/)
 Checkmk provides powerful monitoring of networks, servers, clouds, containers and applications. Fast. Effective.
@@ -23,7 +25,15 @@ Please see [Local checks](https://docs.checkmk.com/latest/en/localchecks.html) t
 ## Adding services to the monitoring
 After placing the script inside of the above mentioned folder, it will automatically executed by the agent every time the agent collects data.  
 Start a new service discovery of the host and add the new found services to the monitoring. Apply the changes and you are good to go!  
-You will get one service per disk with multiple informations like **current temperature**, **bad sector count**, **communication errors** (between disk and controller), **disk model** and so on.
+![sample services](images/services.PNG "sample services as seen by checkmk")
+
+You will get one service per disk with multiple informations like **current temperature**, **bad sector count**, **communication errors** (between disk and controller), **disk model** and so on.  
+
+Sample WARN/CRIT states:
+![warn/crit](images/warn-crit.PNG "sample WARN/CRIT states")
+
+If you click on one of the disks, you can see some beautiful graphs and historical data:
+![details page](images/details_page.png "details page")
 
 ## Notes
 - it's not final!
