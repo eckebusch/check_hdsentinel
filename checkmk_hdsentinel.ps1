@@ -58,9 +58,9 @@ do {
        $templimits = ";45;60 "}
 
        #CheckMK 2.0+ output
-       'P ' + '"' + $diskOutNr + ' ' + $xmlHD_Model + '" weak_sect=' + $weakSectors + ';1;10|comm_errors=' + $comm_errors + ';10;100|temp=' + $temp + $templimits + $description + '\nAMember of ' + $xmlMember
+       'P ' + '"' + $diskOutNr + ' ' + $xmlHD_Model + '" weak_sect=' + $weakSectors + ';1;10|comm_errors=' + $comm_errors + ';10;100|temp=' + $temp + $templimits + $description + '\nMember of ' + $xmlMember
        #CheckMK 1.6+ output
-       #'P ' + '"Disk' + $diskOutNr + '" weak_sect=' + $weakSectors + ';1;10|comm_errors=' + $comm_errors + ';10;100|temp=' + $temp + $templimits + $description + '\nA' + $xmlHD_Model + '\nAMember of ' + $xmlMember
+       #'P ' + '"Disk' + $diskOutNr + '" weak_sect=' + $weakSectors + ';1;10|comm_errors=' + $comm_errors + ';10;100|temp=' + $temp + $templimits + $description + '\n' + $xmlHD_Model + '\nMember of ' + $xmlMember
      }
   }
   $disk++
