@@ -22,7 +22,11 @@ do {
       $xmlMember = $xmlAttr.Hard_Disk_Sentinel.$diskNr.Hard_Disk_Summary.Logical_Drive_s
     
       $pos = $xmlDescription.IndexOf(".")
-      $description = $xmlDescription.Substring(0, $pos+1)
+      if ($pos -ge 1){
+        $description = $xmlDescription.Substring(0, $pos+1)}
+      else {
+        $description = $xmlDescription
+        }
             
       #get communication errors
       [int]$comm_errors = 0
