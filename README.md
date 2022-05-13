@@ -8,12 +8,12 @@ It iterates through the XML file, searches for all disks with usable information
 
 ```PowerShell
 PS C:\Tools\HDsentinel> C:\ProgramData\checkmk\agent\local\checkmk_hdsentinel.ps1
-P "000 WDC WD40EFRX-68WT0N0" weak_sect=0;1;10|comm_errors=0;10;100|temp=35;45;60 The hard disk status is PERFECT.\nAMember of X: [Data-X] 
-P "001 Samsung SSD 850 EVO 500GB" weak_sect=0;1;10|comm_errors=0;10;100|temp=34;60;70 The status of the solid state disk is PERFECT.\nAMember of C: [System] 
-P "002 WDC WD40EFRX-68WT0N0" weak_sect=3;1;10|comm_errors=0;10;100|temp=37;45;60 There are 3 weak sectors found on the disk surface.\nAMember of X: [Data-X] 
-P "003 WDC WD40EFRX-68WT0N0" weak_sect=13;1;10|comm_errors=0;10;100|temp=35;45;60 There are 13 weak sectors found on the disk surface.\nAMember of X: [Data-X] 
-P "004 WDC WD30EFRX-68EUZN0" weak_sect=0;1;10|comm_errors=0;10;100|temp=32;45;60 The hard disk status is PERFECT.\nAMember of Y: [Data-Y] 
-P "005 WDC WD30EFRX-68EUZN0" weak_sect=0;1;10|comm_errors=0;10;100|temp=32;45;60 The hard disk status is PERFECT.\nAMember of Y: [Data-Y]
+P "000 WDC WD40EFRX-68WT0N0" weak_sect=0;1;10|comm_errors=0;10;100|temp=35;45;60 The hard disk status is PERFECT.\nMember of X: [Data-X] 
+P "001 Samsung SSD 850 EVO 500GB" weak_sect=0;1;10|comm_errors=0;10;100|temp=34;60;70 The status of the solid state disk is PERFECT.\nMember of C: [System] 
+P "002 WDC WD40EFRX-68WT0N0" weak_sect=3;1;10|comm_errors=0;10;100|temp=37;45;60 There are 3 weak sectors found on the disk surface.\nMember of X: [Data-X] 
+P "003 WDC WD40EFRX-68WT0N0" weak_sect=13;1;10|comm_errors=0;10;100|temp=35;45;60 There are 13 weak sectors found on the disk surface.\nMember of X: [Data-X] 
+P "004 WDC WD30EFRX-68EUZN0" weak_sect=0;1;10|comm_errors=0;10;100|temp=32;45;60 The hard disk status is PERFECT.\nMember of Y: [Data-Y] 
+P "005 WDC WD30EFRX-68EUZN0" weak_sect=0;1;10|comm_errors=0;10;100|temp=32;45;60 The hard disk status is PERFECT.\nMember of Y: [Data-Y]
 ```
 # [Checkmk](https://checkmk.com/)
 Checkmk provides powerful monitoring of networks, servers, clouds, containers and applications. Fast. Effective.
